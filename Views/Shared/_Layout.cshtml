@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dr. Cleiber Bueno</title>
+    <link rel="icon" type="image/ico" href="~/images/LogoIcone.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/drCleiber.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="#inicio" aria-label="Início">
+            <img class="nav-logo-img" src="~/images/SomenteALogo.png" alt="Dr. Cleiber Bueno — Clínico Geral">
+        </a>
+        <ul class="nav-links" role="list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#documentos">Documentos</a></li>
+            <li>
+                <a href="https://wa.me/556798065995" target="_blank" rel="noopener" class="nav-btn">
+                    💬 Agendar Consulta
+                </a>
+            </li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- DRAWER MOBILE -->
+    <nav class="drawer" id="drawer" aria-label="Menu mobile">
+        <a href="#sobre">Sobre o Dr. Cleiber</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#documentos">Documentos</a>
+        <a href="https://wa.me/556798065995?text=Olá%2C%20Dr.%20Cleiber!%20Gostaria%20de%20agendar%20uma%20consulta."
+           target="_blank" rel="noopener" class="dcta">
+            💬 Agendar pelo WhatsApp
+        </a>
+    </nav>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+    @RenderBody()
+
+    <!-- FOOTER -->
+    <footer>
+        <img class="ft-logo" src="~/images/SomenteALogo.png" alt="Dr. Cleiber Bueno">
+        <p class="ft-info">
+            Dr. Cleiber Bueno Ferreira · CRM-MS 15182<br>
+            Clínico Geral &amp; Médico do Trabalho · Dourados – MS<br>
+            Telemedicina · Atendimento Online
+        </p>
+        <div class="ft-links">
+            <a href="https://wa.me/556798065995" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#documentos">Documentos</a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a class="wa-fab"
+       href="https://wa.me/556798065995?text=Olá%2C%20Dr.%20Cleiber!%20Gostaria%20de%20agendar%20uma%20consulta."
+       target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.509 5.843L0 24l6.335-1.484A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.945 0-3.76-.528-5.315-1.446l-.38-.226-3.76.881.922-3.657-.249-.392A9.788 9.788 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818 5.424 0 9.818 4.394 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z" />
+        </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="~/js/drCleiber.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

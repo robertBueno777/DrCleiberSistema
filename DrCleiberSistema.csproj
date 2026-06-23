@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\FotoCleibin.jpeg" />
+    <None Include="wwwroot\Images\LogoDrCleiber.png" />
+    <None Include="wwwroot\Images\LogoDrCleiberPNG.png" />
+    <None Include="wwwroot\Images\LogoIcone.ico" />
+    <None Include="wwwroot\Images\logoParaSobre.png" />
+    <None Include="wwwroot\Images\Novo Projeto.jpg" />
+    <None Include="wwwroot\Images\SomenteALogo.png" />
+    <None Include="wwwroot\Images\tentativa4.jpg" />
+  </ItemGroup>
+
+</Project>
