@@ -32,3 +32,4 @@ C:\Users\cleib\OneDrive\Área de Trabalho\retorno\DrCleiberSistema\DrCleiberSist
 C:\Users\cleib\OneDrive\Área de Trabalho\retorno\DrCleiberSistema\DrCleiberSistema\obj\Debug\net8.0\DrCleiberSistema.pdb
 C:\Users\cleib\OneDrive\Área de Trabalho\retorno\DrCleiberSistema\DrCleiberSistema\obj\Debug\net8.0\DrCleiberSistema.genruntimeconfig.cache
 C:\Users\cleib\OneDrive\Área de Trabalho\retorno\DrCleiberSistema\DrCleiberSistema\obj\Debug\net8.0\ref\DrCleiberSistema.dll
+C:\Users\cleib\OneDrive\Área de Trabalho\retorno\DrCleiberSistema\DrCleiberSistema\obj\Debug\net8.0\DrCleiberSistema.sourcelink.json
