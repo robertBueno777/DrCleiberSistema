@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/DrCleiberSistema/css/drCleiber.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\drCleiber.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xFkFdbHY0c\u002BhUFVyUOJ1WLielHHxkZks0yBprgKnp7U="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"24637"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xFkFdbHY0c\u002BhUFVyUOJ1WLielHHxkZks0yBprgKnp7U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 23 Jun 2026 18:47:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kzdyCcvno8gcbCV\u002B\u002BOm0rc/LPY58ASlNjC8i/DbUIQ4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"30027"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022kzdyCcvno8gcbCV\u002B\u002BOm0rc/LPY58ASlNjC8i/DbUIQ4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 24 Jun 2026 02:01:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/DrCleiberSistema/css/drCleiber.gnjv92sez6.css">
+    <StaticWebAssetEndpoint Include="_content/DrCleiberSistema/css/drCleiber.jkn1ubygn8.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\drCleiber.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gnjv92sez6"},{"Name":"integrity","Value":"sha256-xFkFdbHY0c\u002BhUFVyUOJ1WLielHHxkZks0yBprgKnp7U="},{"Name":"label","Value":"_content/DrCleiberSistema/css/drCleiber.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24637"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022xFkFdbHY0c\u002BhUFVyUOJ1WLielHHxkZks0yBprgKnp7U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 23 Jun 2026 18:47:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jkn1ubygn8"},{"Name":"integrity","Value":"sha256-kzdyCcvno8gcbCV\u002B\u002BOm0rc/LPY58ASlNjC8i/DbUIQ4="},{"Name":"label","Value":"_content/DrCleiberSistema/css/drCleiber.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30027"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022kzdyCcvno8gcbCV\u002B\u002BOm0rc/LPY58ASlNjC8i/DbUIQ4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 24 Jun 2026 02:01:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DrCleiberSistema/css/site.5ipweew5fc.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrCleiberSistema")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4afeab30ee3762c3e688fbf90ef57fea8547e94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42eea90fd16e28cad9379330fb15589015363c41")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrCleiberSistema")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrCleiberSistema")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gnjv92sez6</Fingerprint>
-      <Integrity>xFkFdbHY0c+hUFVyUOJ1WLielHHxkZks0yBprgKnp7U=</Integrity>
+      <Fingerprint>jkn1ubygn8</Fingerprint>
+      <Integrity>kzdyCcvno8gcbCV++Om0rc/LPY58ASlNjC8i/DbUIQ4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\drCleiber.css'))</OriginalItemSpec>

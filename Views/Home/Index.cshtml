@@ -17,10 +17,7 @@
             <span class="pill">💻 Telemedicina</span>
         </div>
         <div class="hero-actions reveal d4">
-            <a href="https://wa.me/556798065995?text=Olá%2C%20Dr.%20Cleiber!%20Gostaria%20de%20agendar%20uma%20consulta."
-               class="btn-g" target="_blank" rel="noopener">
-                💬 Agendar pelo WhatsApp
-            </a>
+            <a href="#agendar" class="btn-g">📋 Agendar Consulta</a>
             <a href="#como-funciona" class="btn-o">Como funciona →</a>
         </div>
     </div>
@@ -116,9 +113,9 @@
     <div class="how-grid">
         <div class="how-card reveal">
             <div class="how-seq">1</div><div class="how-icon">📅</div>
-            <h3>Agendamento pelo WhatsApp</h3>
-            <p>Rápido e sem complicação. Pague 50% para confirmar e os outros 50% após a consulta.</p>
-            <span class="how-tag">50% reserva · 50% pós-consulta</span>
+            <h3>Agendamento pelo Formulário</h3>
+            <p>Preencha seus dados abaixo. Entraremos em contato pelo WhatsApp para confirmar o horário.</p>
+            <span class="how-tag">Rápido e sem complicação</span>
         </div>
         <div class="how-card reveal d1">
             <div class="how-seq">2</div><div class="how-icon">🎥</div>
@@ -178,12 +175,148 @@
     </div>
 </section>
 
+<!-- FORMULÁRIO DE AGENDAMENTO -->
+<section class="section form-section" id="agendar">
+    <div class="form-wrap">
+
+        <!-- Lado esquerdo: explicação -->
+        <div class="form-intro reveal">
+            <p class="eyebrow">Agendar Consulta</p>
+            <h2 class="section-h2">Preencha os dados<br>para <em>agendar</em></h2>
+            <p class="form-intro-text">
+                Preencha o formulário ao lado com calma e sem pressa.
+                Assim que recebermos suas informações, o Dr. Cleiber entrará
+                em contato pelo WhatsApp para confirmar o horário da sua consulta.
+            </p>
+            <ul class="form-checklist">
+                <li>
+                    <span class="fcheck-icon">✅</span>
+                    <span>Agendamento simples e rápido</span>
+                </li>
+                <li>
+                    <span class="fcheck-icon">✅</span>
+                    <span>Confirmação pelo WhatsApp</span>
+                </li>
+                <li>
+                    <span class="fcheck-icon">✅</span>
+                    <span>Sem necessidade de enviar exames</span>
+                </li>
+                <li>
+                    <span class="fcheck-icon">✅</span>
+                    <span>Atendimento humanizado e seguro</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Lado direito: formulário -->
+        <div class="form-card reveal d2">
+
+            <!-- Formulário visível -->
+            <div id="formContent">
+                <div class="form-card-header">
+                    <div class="form-card-icon">📋</div>
+                    <div>
+                        <div class="form-card-title">Solicitação de Consulta</div>
+                        <div class="form-card-sub">Todos os campos são obrigatórios</div>
+                    </div>
+                </div>
+
+                <form asp-action="Agendar" asp-controller="Home" method="post" novalidate id="formAgendar">
+                    @Html.AntiForgeryToken()
+
+                    <!-- Nome -->
+                    <div class="form-field">
+                        <label class="form-label" for="NomePaciente">
+                            👤 Nome completo
+                        </label>
+                        <input class="form-input"
+                               type="text"
+                               id="NomePaciente"
+                               name="NomePaciente"
+                               placeholder="Ex: Maria Aparecida Santos"
+                               autocomplete="name"
+                               required />
+                        <span class="form-dica">Digite seu nome como está no documento.</span>
+                    </div>
+
+                    <!-- Idade -->
+                    <div class="form-field">
+                        <label class="form-label" for="IdadePaciente">
+                            🎂 Idade
+                        </label>
+                        <input class="form-input form-input-small"
+                               type="number"
+                               id="IdadePaciente"
+                               name="IdadePaciente"
+                               placeholder="Ex: 58"
+                               min="1"
+                               max="120"
+                               required />
+                        <span class="form-dica">Apenas o número, em anos completos.</span>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="form-field">
+                        <label class="form-label" for="NumeroContato">
+                            📱 WhatsApp com DDD
+                        </label>
+                        <input class="form-input"
+                               type="tel"
+                               id="NumeroContato"
+                               name="NumeroContato"
+                               placeholder="Ex: (67) 99999-0000"
+                               autocomplete="tel"
+                               required />
+                        <span class="form-dica">É por aqui que confirmaremos seu horário.</span>
+                    </div>
+
+                    <!-- Motivo -->
+                    <div class="form-field">
+                        <label class="form-label" for="MotivoConsulta">
+                            🩺 Motivo da consulta
+                        </label>
+                        <textarea class="form-textarea"
+                                  id="MotivoConsulta"
+                                  name="MotivoConsulta"
+                                  placeholder="Ex: Estou sentindo dor de cabeça com frequência e gostaria de avaliar minha pressão arterial..."
+                                  rows="4"
+                                  required></textarea>
+                        <span class="form-dica">Descreva brevemente o que está sentindo ou o que deseja consultar.</span>
+                    </div>
+
+                    <button type="submit" class="form-submit" id="btnEnviar">
+                        📋 Enviar Solicitação de Consulta
+                    </button>
+
+                    <p class="form-privacidade">
+                        🔒 Seus dados são confidenciais e utilizados exclusivamente para o agendamento da consulta.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Mensagem de sucesso (mostrada após envio) -->
+            <div id="formSucesso" class="form-sucesso" style="display:none;">
+                <div class="sucesso-icon">✅</div>
+                <h3 class="sucesso-titulo">Solicitação enviada!</h3>
+                <p class="sucesso-texto">
+                    Recebemos seus dados com sucesso. Em breve o Dr. Cleiber
+                    entrará em contato pelo WhatsApp para confirmar o horário da sua consulta.
+                </p>
+                <a href="https://wa.me/556798065995" target="_blank" rel="noopener" class="btn-g" style="display:inline-flex;margin-top:1.5rem;">
+                    💬 Falar pelo WhatsApp agora
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
-<section class="section cta-section" id="agendar">
+<section class="section cta-section">
     <div class="cta-inner">
-        <p class="eyebrow reveal">Pronto para cuidar da sua saúde?</p>
-        <h2 class="cta-h2 reveal d1">Agende agora sua<br><em>consulta online</em></h2>
-        <p class="reveal d2">Atendimento seguro, prático e humanizado. Fale comigo pelo WhatsApp e escolha o melhor horário para você.</p>
+        <p class="eyebrow reveal">Dúvidas? Fale diretamente</p>
+        <h2 class="cta-h2 reveal d1">Prefere agendar<br><em>pelo WhatsApp?</em></h2>
+        <p class="reveal d2">Sem problema! Você também pode entrar em contato diretamente pelo WhatsApp para agendar ou tirar dúvidas.</p>
         <div class="cta-btns reveal d3">
             <a href="https://wa.me/556798065995?text=Olá%2C%20Dr.%20Cleiber!%20Gostaria%20de%20agendar%20uma%20consulta."
                class="btn-wa" target="_blank" rel="noopener">
@@ -196,3 +329,30 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <script>
+        // Máscara simples para telefone
+        document.getElementById('NumeroContato').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+            if (v.length >= 7) {
+                v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+            } else if (v.length >= 3) {
+                v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+            } else if (v.length >= 1) {
+                v = '(' + v;
+            }
+            e.target.value = v;
+        });
+
+        // Submit com feedback visual
+        document.getElementById('formAgendar').addEventListener('submit', function (e) {
+            const btn = document.getElementById('btnEnviar');
+            btn.textContent = '⏳ Enviando...';
+            btn.disabled = true;
+            btn.style.opacity = '0.75';
+            // O form faz POST normal — o controller redireciona de volta
+            // Se quiser AJAX, remova o submit default e use fetch aqui
+        });
+    </script>
+}
